@@ -1,0 +1,50 @@
+
+<div class="grid col-12 py-2 px-0  mx-0 my-0 flex  align-items-start text-center justify-content-center">
+  <p class="col-12 text-title pb-2 pt-2 px-3 m-0 ">Idiomas</p>
+  <div class="col-12 grid text-info pt-6 pb-0 m-0 flex  align-items-start justify-content-center">
+
+    <div class="col-12 md:col-4 grid m-0 mt-2 mb-2" *ngFor="let language of languages">
+      <div class="col-12 div-languege ">
+
+
+
+        <!--Div para lengua materna -->
+
+
+        <!--Div para lengua extra-->
+        <div class="grid m-0 p-0" *ngIf="language.motherTongue === false || language.motherTongue === true || language.isoFlag">
+
+          <div class="col-12 md:col-12 py-2 m-0">
+            <img src="https://flagcdn.com/w80/{{language.isoFlag}}.png" class="div-flag"   alt="flag">
+
+            <p class="text-info-02 pt-4 pb-0 m-0" style="font-weight: 400;">
+              {{language.title}} nivel {{language.degree}} ({{language.level}})
+            </p>
+
+          </div>
+
+          <div class="grid col-12 md:col-12 py-2 m-0">
+            <p class="col-12 text-info-02 pt-2 pb-2 m-0" style="text-align: start;">
+              Porcentaje de pronunciación:
+            </p>
+            <p class="col-12 text-info-02 pt-0 pb-2 m-0" style="font-weight: 400;" >
+              <p-progressBar [value]="language.percentageSpoken" styleClass="languages-progress"></p-progressBar>
+            </p>
+            <p class="col-12 text-info-02 pt-2 pb-2 m-0" style="text-align: start;">
+              Porcentaje de comprensión y escritura:
+            </p>
+            <p class="col-12 text-info-02 pt-0 pb-2 m-0" style="font-weight: 400;" >
+              <p-progressBar [value]="language.readingWritingPorsetanje" styleClass="languages-progress"></p-progressBar>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+</div>

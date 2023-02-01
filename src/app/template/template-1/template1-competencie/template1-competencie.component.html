@@ -1,0 +1,73 @@
+  <!-- Competencias  -->
+
+
+  <!--<div class="grid container-secondary flex  justify-content-center"
+  *ngIf="competencies != undefined">
+  <div class="grid col-12 py-2 px-0  mx-0 my-0 flex  align-items-start ">
+    <p class="col-12 text-title pb-2 pt-4 px-3 m-0 text-center">Competencias</p>
+
+    <div class="col-12 grid text-info pt-6 pb-0 m-0 ">
+
+      <div class="px-3 m-0 col-12  md:col-6" *ngFor="let competencie of competencies">
+        <div class="text-info-02 py-4 px-3 m-0 list-competencies grid">
+          <div class="p-0 m-0 col-3">
+            <div>&#10003;</div>
+          </div>
+          <div class="p-0 m-0 col-9">
+            {{competencie.description}}
+          </div>
+        </div>
+        <div class="py-1"></div>
+      </div>
+
+    </div>
+  </div>
+  </div>-->
+
+  <!--PC-->
+  <div class="grid col-12 py-2 px-0  mx-0 my-0 flex  align-items-start text-center competencies-pc">
+    <p class="col-12 text-title pb-2 pt-4 px-3 m-0 ">Competencias</p>
+
+    <div class="col-12 grid text-info pt-6 pb-0 m-0 ">
+
+      <div class="px-3 pt-4 m-0 col-12 sm:col-6 md:col-3 flex justify-content-center grid" *ngFor="let competencie of competencies">
+
+        <div class="circular-competencies col-12">
+          <img [src]="competencie.assets?.img">
+        </div>
+
+        <p class="col-12 text-info-02 pt-0" style="font-weight: 400;">{{competencie.description}}</p>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!--Carrusel vista para movile-->
+  <div *ngIf="competencies" class="py-2 px-0  mx-0 my-0 competencies-movile">
+
+    <p class="col-12 text-title pb-2 pt-4 px-3 m-0 ">Competencias</p>
+
+    <p-carousel [value]="competencies" [circular]="true" [autoplayInterval]="3000"  [style]="{'max-width':'300px'}">
+      <ng-template let-competencie pTemplate="item"  >
+
+        <div class="col-12 grid text-info pt-6 pb-0 m-0 flex justify-content-center align-items-center">
+          <div class="px-3 pt-4 m-0 col-12  flex justify-content-center align-items-center grid">
+
+            <div class="circular-competencies col-12 flex justify-content-center align-items-center">
+              <img [src]="competencie.assets?.img">
+            </div>
+
+            <p class="col-12 text-info-02 pt-0" style="font-weight: 400; text-align: center;">{{competencie.description}}</p>
+
+          </div>
+        </div>
+
+
+
+      </ng-template>
+    </p-carousel>
+  </div>
+
+
+

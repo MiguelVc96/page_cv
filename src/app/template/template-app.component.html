@@ -1,0 +1,32 @@
+
+
+
+
+<!--Pantalla de carga-->
+<div class="p-0 m-0" *ngIf="isLoading">
+  <app-loading></app-loading>
+</div>
+
+
+
+<!--Encabezado-->
+<app-header [alias]="profile?.alias"></app-header>
+
+<!--Tema 1-->
+
+<div class="p-0 m-0" *ngIf="profile">
+  <app-template-1 [profile]="profile"></app-template-1>
+</div>
+
+
+<!--Pantalla de error -->
+<div class="p-0 m-0" *ngIf="isError">
+  <app-error-screen (refreshEvent)="refreshProfile($event)"></app-error-screen>
+</div>
+
+
+
+
+
+
+

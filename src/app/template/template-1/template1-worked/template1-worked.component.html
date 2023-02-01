@@ -1,0 +1,79 @@
+<!--Linea de tiempo para web-->
+<div class="grid col-12 py-2 px-0  mx-0 my-0 timeLine-web">
+  <p class="col-12 text-title pb-2 pt-6 px-3 m-0 text-center">Experiencia Profesional</p>
+
+  <div class="m-0 pt-6 px-0 pb-2 col-12">
+    <p-timeline [value]="worked" styleClass="timeline" >
+
+      <!--Lado derecho-->
+      <ng-template pTemplate="content" let-event>
+
+        <p class="m-0 p-0 text-subtitle-02">
+          {{event.job}}
+        </p>
+        <p class="m-0 px-0 pt-3 pb-2 text-info-02">
+          {{event.nameCompany}}
+        </p>
+        <p class="m-0 px-0 pt-0 pb-3 text-info-03">
+          {{event.companyAddress}}
+        </p>
+
+        <p class="m-0 px-0 pt-0 pb-3 text-info-02">Funciones:</p>
+        <ul class="pt-o pb-3 m-0 check-list-triangle" *ngFor="let fun of event.jobFunctions">
+          <li class="text-info-02 " >
+            {{fun.description}}
+          </li>
+        </ul>
+
+        <div class="py-4"></div>
+
+      </ng-template>
+
+      <!--Lado izquierdo-->
+      <ng-template pTemplate="opposite" let-event>
+        <p class="m-0 p-0 text-subtitle-02">
+          {{[event.startDate] + ' - '+ [event.endDate]}}
+        </p>
+      </ng-template>
+    </p-timeline>
+  </div>
+
+</div>
+
+<!---Linea de tiempo para movile -->
+
+<div class="grid col-12 py-2 px-0  mx-0 my-0 timeLine-mobile">
+  <p class="col-12 text-title pb-2 pt-6 px-3 m-0 text-center">Experiencia Profesional</p>
+
+  <div class="m-0 pt-6 px-0 pb-2 col-12">
+    <p-timeline [value]="worked" styleClass="timeline-02" >
+
+      <!--Lado derecho-->
+      <ng-template pTemplate="content" let-event>
+
+        <p class="m-0 p-0 text-subtitle-02">
+          {{event.job}}
+        </p>
+        <p class="m-0 pt-1 text-info-02">
+          {{[event.startDate] + ' - '+ [event.endDate]}}
+        </p>
+        <p class="m-0 px-0 pt-3 pb-2 text-info-02">
+          {{event.nameCompany}}
+        </p>
+        <p class="m-0 px-0 pt-0 pb-3 text-info-03">
+          {{event.companyAddress}}
+        </p>
+
+        <p class="m-0 px-0 pt-0 pb-3 text-info-02">Funciones:</p>
+        <ul class="pt-o pb-3 m-0 check-list-triangle" *ngFor="let fun of event.jobFunctions">
+          <li class="text-info-02 " >
+            {{fun.description}}
+          </li>
+        </ul>
+
+      </ng-template>
+
+    </p-timeline>
+  </div>
+
+</div>

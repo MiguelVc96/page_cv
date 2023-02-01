@@ -1,0 +1,240 @@
+.container-background{
+  max-height: 400px;
+  min-height: 400px;
+  min-width: 100%;
+  //background: radial-gradient(circle, rgba(87,87,87,1) 0%, rgba(25,25,25,1) 100%);
+  //background: linear-gradient(59deg, rgba(7,30,85,1) 0%, rgba(20,48,116,1) 65%, rgba(32,70,161,1) 100%);
+  background: linear-gradient(59deg, rgb(5, 23, 63) 0%, rgb(16, 38, 92) 65%, rgb(12, 30, 70) 100%);
+  padding: 0% !important;
+  margin: 0% !important;
+  position: relative;
+}
+
+
+//Pantalla maxima
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  padding-top: 100px;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 20px;
+}
+
+
+//div secundario
+.container-secondary{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 3em;
+  padding-bottom: 1em;
+}
+
+
+//Div de ingformacion principal
+.container-main-data{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+//Lineas de tiempo
+.timeLine-mobile{
+  display: none !important;
+}
+.timeLine-web{
+  display: block !important;
+}
+
+//texto para titulo 'nombre'
+.text-title{
+  font-weight: 400;
+  font-size: 35px;
+  font-family: "system-ui", serif;
+
+}
+
+//texto para subtitulo
+.text-subtitle-01{
+  font-weight: 300;
+  font-size: 20px;
+  font-family: system-ui;
+}
+
+//texto para subtitulo
+.text-subtitle-02{
+  font-weight: 400;
+  font-size: 25px;
+  font-family: system-ui;
+}
+
+//texto general
+.text-info{
+  font-weight: 300;
+  font-size: 22px;
+  font-family: system-ui;
+  word-wrap: break-word;
+}
+
+//texto general para lineas de tiempo importantes
+.text-info-02{
+  font-weight: 300;
+  font-size: 20px;
+  font-family: system-ui;
+  word-wrap: break-word;
+}
+
+//texto general para lineas de tiempo menos importantes
+.text-info-03{
+  font-weight: 300;
+  font-size: 16px;
+  font-family: system-ui;
+  word-wrap: break-word;
+}
+
+//texto objetivo
+.text-objective{
+  font-weight: 300;
+  font-size: 25px;
+  font-family: system-ui;
+  text-align: justify;
+}
+
+//texto para titulos separacion
+.text-title-section{
+  font-weight: 400;
+  font-size: 38px;
+  font-family: "system-ui", serif;
+
+}
+
+//link para el resto de la pagina
+.text-link{
+  color: #3963CB;
+  text-decoration: none;
+  font-weight: 400;
+  cursor: pointer;
+}.text-link:hover{
+  color: #3868D9;
+  text-decoration: underline;
+}
+
+// link para el correo
+.text-link-email{
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}.text-link-email:hover{
+  color: rgb(79, 79, 79);
+}
+
+// Foto
+.circular-portrait {
+  position: relative;
+  width: 220px;
+  height: 260px;
+  /*
+    tamaño estandar
+    width: 200px;
+    height: 200px;
+  */
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: rgb(187, 187, 187);
+ }
+.circular-portrait img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+//botones de redes sociales
+.btn-social-networks {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 10%;
+  overflow: hidden;
+ }
+.btn-social-networks img {
+  width: 100%;
+  height: auto;
+}
+
+//div linea de separacion
+.div-separation{
+  display: block;
+}
+
+
+
+.p-button-retun-top{
+  position: fixed;
+    bottom: 15px;
+    right: 0px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+
+//dispositivos tablet 768
+@media (max-width: 768px){
+  .div-separation{
+    display: none;
+  }
+  .timeLine-mobile{
+    display: block !important;
+  }
+  .timeLine-web{
+    display: none !important;
+  }
+}
+
+//Dispositivos moviles 576
+
+@media (max-width: 576px){
+
+  .container-secondary{
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .text-objective{
+    font-weight: 300;
+    font-size: 22px;
+    font-family: system-ui;
+    text-align: justify;
+  }
+  .text-title{
+    text-align: center;
+  }
+  .text-subtitle-01{
+    text-align: center;
+  }
+  .div-separation{
+    display: none;
+  }
+
+
+  .btn-01{
+    display: flex;
+    justify-content: center;
+  }
+
+
+
+}
+
+
+
+
+

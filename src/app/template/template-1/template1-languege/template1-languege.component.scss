@@ -1,0 +1,133 @@
+
+.text-title{
+  text-align: center;
+}
+
+//texto para titulo 'nombre'
+.text-title{
+  font-weight: 400;
+  font-size: 35px;
+  font-family: "system-ui", serif;
+
+}
+
+//texto general para lineas de tiempo importantes
+.text-info-02{
+  font-weight: 300;
+  font-size: 20px;
+  font-family: system-ui;
+  word-wrap: break-word;
+  color: #000;
+}
+
+//Lis competencias
+/*.div-languege{
+  border-left: 8px solid #3868D9;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-weight: 400;
+  //max-height: 430px;
+  //min-height: 430px;
+}*/
+
+//Lis competencias
+.div-languege{
+  border-top: 8px solid #3868D9;
+  border-left: none;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-weight: 400;
+  //max-height: 430px;
+  //min-height: 430px;
+}
+
+
+.div-flag{
+  max-width: 120px;
+  min-width: 120px;
+  max-height: 79px;
+  min-height: 79px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+// imagen competencias
+.circular-competencies {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid #3868D9;
+ }
+.circular-competencies img {
+  width: 80%;
+  height: auto;
+  margin-left: 0px;
+  margin-top: 15px;
+}
+
+
+
+
+//dispositivos tablet 768
+@media (max-width: 768px){
+  .div-separation{
+    display: none;
+  }
+
+  //Lis competencias
+  .div-languege{
+    border-top: 8px solid #3868D9;
+    border-left: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-weight: 400;
+    //max-height: 430px;
+    //min-height: 430px;
+  }
+
+}
+
+//Dispositivos moviles 576
+
+@media (max-width: 576px){
+
+  .container-secondary{
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .text-title{
+    text-align: center;
+  }
+  .text-subtitle-01{
+    text-align: center;
+  }
+  .div-separation{
+    display: none;
+  }
+
+  .timeLine-mobile{
+    display: block !important;
+  }
+  .timeLine-web{
+    display: none !important;
+  }
+
+
+
+}
+
+
+:host ::ng-deep .languages-progress.p-progressbar-determinate .p-progressbar-label {
+  font-weight: 700;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+}

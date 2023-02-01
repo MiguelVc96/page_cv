@@ -1,0 +1,91 @@
+.container-background{
+  max-height: 400px;
+  min-height: 400px;
+  min-width: 100%;
+  padding: 0% !important;
+  margin: 0% !important;
+  position: relative;
+}
+
+
+//Pantalla maxima
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  padding-top: 100px;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px;
+}
+
+
+//botones de redes sociales
+.img-error {
+  position: relative;
+  min-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+.img-error img {
+  width: 100%;
+  height: auto;
+  margin-top: 250px !important;
+}
+
+.containe-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-1{
+  font-weight: 300;
+    font-size: 48px;
+}
+
+.text-2{
+  font-size: 22px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.margin-text{
+  margin-top: 190px;
+}
+
+@media only screen and (max-width:810px){
+  .margin-text{
+    margin-top: 235px;
+  }
+}
+
+@media only screen and (max-width:768px){
+  .margin-text{
+    margin-top: 0px;
+  }
+
+  .img-error img {
+    width: 50%;
+    height: auto;
+    margin-top: 250px !important;
+  }
+
+}
+
+@media only screen and (max-width:522px){
+
+  .img-error img {
+    width: 80%;
+    height: auto;
+    margin-top: 250px !important;
+  }
+
+}
+

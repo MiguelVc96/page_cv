@@ -1,0 +1,116 @@
+
+.text-title{
+  text-align: center;
+}
+
+//texto para titulo 'nombre'
+.text-title{
+  font-weight: 400;
+  font-size: 35px;
+  font-family: "system-ui", serif;
+
+}
+
+//texto general para lineas de tiempo importantes
+.text-info-02{
+  font-weight: 300;
+  font-size: 20px;
+  font-family: system-ui;
+  word-wrap: break-word;
+}
+
+
+//Lis competencias
+.list-competencies{
+  background: linear-gradient(59deg, #2046a1 0%, #3963C8 65%, #3868D9  100%);
+  box-shadow: rgb(0 0 0 / 50%) 0px 3px 8px;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 400;
+}
+// imagen competencias
+.circular-competencies {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid #3868D9;
+ }
+.circular-competencies img {
+  width: 80%;
+  height: auto;
+  margin-left: 0px;
+  margin-top: 15px;
+}
+
+
+.competencies-movile{
+  display: none;
+}
+
+.competencies-pc{
+  display: block;
+}
+
+
+
+
+//carrucel
+
+
+
+
+
+
+//dispositivos tablet 768
+@media (max-width: 768px){
+  .div-separation{
+    display: none;
+  }
+}
+
+//Dispositivos moviles 576
+
+@media (max-width: 576px){
+
+  .container-secondary{
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .text-title{
+    text-align: center;
+  }
+  .text-subtitle-01{
+    text-align: center;
+  }
+  .div-separation{
+    display: none;
+  }
+
+  .timeLine-mobile{
+    display: block !important;
+  }
+  .timeLine-web{
+    display: none !important;
+  }
+
+  .competencies-movile{
+    display: block !important;
+  }
+
+  .competencies-pc{
+    display: none !important;
+  }
+
+  .circular-competencies img {
+    width: 80%;
+    height: auto;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+}
+
+
+

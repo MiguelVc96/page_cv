@@ -1,0 +1,145 @@
+
+//div linea de separacion
+.div-separation{
+  display: block;
+}
+
+//Lineas de tiempo
+.timeLine-mobile{
+  display: none !important;
+}
+.timeLine-web{
+  display: block !important;
+}
+
+
+.text-title{
+  text-align: center;
+}
+
+//texto para titulo 'nombre'
+.text-title{
+  font-weight: 400;
+  font-size: 35px;
+  font-family: "system-ui", serif;
+
+}
+
+//texto para subtitulo
+.text-subtitle-02{
+  font-weight: 400;
+  font-size: 25px;
+  font-family: system-ui;
+}
+
+//texto general para lineas de tiempo importantes
+.text-info-02{
+  font-weight: 300;
+  font-size: 20px;
+  font-family: system-ui;
+  word-wrap: break-word;
+}
+
+//texto general para lineas de tiempo menos importantes
+.text-info-03{
+  font-weight: 300;
+  font-size: 16px;
+  font-family: system-ui;
+  word-wrap: break-word;
+}
+
+
+/*lista triangulo*/
+
+.check-list-triangle {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.check-list-triangle li {
+  position: relative;
+  list-style-type: none;
+  padding-left: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.check-list-triangle li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 0px;
+  height: 0px;
+  border-left: 10px solid #3868D9;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+
+}
+
+
+//dispositivos tablet 768
+@media (max-width: 768px){
+  .div-separation{
+    display: none;
+  }
+  .timeLine-mobile{
+    display: block !important;
+  }
+  .timeLine-web{
+    display: none !important;
+  }
+}
+
+//Dispositivos moviles 576
+
+@media (max-width: 576px){
+
+  .container-secondary{
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .text-title{
+    text-align: center;
+  }
+  .text-subtitle-01{
+    text-align: center;
+  }
+  .div-separation{
+    display: none;
+  }
+
+
+
+
+
+}
+
+
+/*Componente de ng prime*/
+
+//linea de tiempo web
+
+:host ::ng-deep .timeline.p-timeline .p-timeline-event-marker {
+  border: 2px solid #3963CB;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #3963CB;
+}
+
+//linea de tiempo movile
+
+:host ::ng-deep .timeline-02.p-timeline.p-timeline-vertical .p-timeline-event-opposite, .p-timeline.p-timeline-vertical .p-timeline-event-content {
+  padding: 0 1rem;
+  display: none;
+}
+
+:host ::ng-deep .timeline-02.p-timeline .p-timeline-event-marker {
+  border: 2px solid #3963CB;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #3963CB;
+}
+

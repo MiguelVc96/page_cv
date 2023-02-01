@@ -1,0 +1,170 @@
+
+
+  /* ============= Variables globales ==================== */
+  //Modo oscuro
+  // $color-Div: #000;
+  // $color-Text: #fff;
+  // $color-Div-Hover: #202020;
+  // $color-Text-Hover:  #e8e8e8;
+
+  //Modo claro
+  $color-Div: #232323f1;
+  $color-Text: #fff;
+  $color-Div-Hover: #232323f1;
+  $color-Text-Hover: #ebebeb;
+
+  /* ================================================== */
+
+//Pantalla maxima
+.container {
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index:1;
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.2);
+  min-height: 56px;
+  background-color: $color-Div;
+  display: block;
+}
+
+
+//Pantalla maxima movile
+.container-movile{
+  overflow: hidden;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index:1;
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.2);
+  min-height: 56px;
+  background-color: $color-Div;
+  display: none;
+}
+
+
+.div-main{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+//texto para titulo 'nombre'
+.text-title{
+  font-weight: 400;
+  font-size: 32px;
+  font-family: "system-ui", serif;
+  max-height: 58px;
+  min-height: 58px;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  color: ($color-Text);
+}
+
+.text-title:hover{
+  color: $color-Text-Hover;
+}
+
+//texto para subtitulo
+.text-subtitle-02{
+  font-weight: 400;
+  font-size: 20px;
+  font-family: system-ui;
+  //color: #3963CB;
+  color: $color-Text;
+  text-align: center;
+  cursor: pointer;
+  max-height: 58px;
+  min-height: 58px;
+}
+
+//texto para subtitulo
+.text-subtitle-03{
+  font-weight: 400;
+  font-size: 20px;
+  font-family: system-ui;
+  //color: #3963CB;
+  color: $color-Text;
+  cursor: pointer;
+  max-height: 58px;
+  min-height: 58px;
+}
+
+.text-subtitle-02:hover{
+  //background-color: #e8e8e8;
+  //color: #3868D9;
+  background-color: $color-Div-Hover;
+  color: $color-Text-Hover;
+}
+
+.btn-close-menu{
+  background-color: #3868D9;
+  color: #fff;
+  text-align: center;
+  border-radius: 7px;
+  font-size: 25px;
+}
+
+
+
+
+//dispositivos tablet 800
+@media (max-width: 800px){
+  .text-title{
+    font-size: 28px;
+
+  }
+}
+
+//dispositivos tablet 768
+@media (max-width: 768px){
+  .container{
+    display: none;
+  }
+  .container-movile{
+    display: block;
+  }
+  .menu-icons{
+    font-size: 28px;
+  }
+  .text-subtitle-02{
+    font-weight: 400;
+    font-size: 20px;
+    font-family: system-ui;
+    text-align: left;
+    cursor: pointer;
+    max-height: 58px;
+    min-height: 58px;
+    border-bottom: 1px solid #8d8d8d44;
+  }
+}
+
+//slider
+
+:host ::ng-deep .menu.p-sidebar-left {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 20rem;
+  padding: 0rem;
+  background-color: $color-Div;
+}
+
+:host ::ng-deep .menu.p-sidebar .p-sidebar-content {
+  padding: 0%;
+}
+
+:host ::ng-deep .menu.p-sidebar .p-sidebar-header {
+  background-color: #3868D9;
+  margin: 0px;
+  padding: 0%;
+}
+
+.menu-header{
+  background-color: rgba(20,48,116,1);
+  color: #fff;
+  min-height: 80px;
+  font-size: 23px;
+}

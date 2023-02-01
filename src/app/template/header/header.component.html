@@ -1,0 +1,77 @@
+<div class="container  p-0 m-0">
+ <div class="col-12 grid div-main p-0 flex justify-content-center align-items-center">
+
+  <span *ngIf="alias else error" (click)="goDown('targetHome')" class="m-0 py-2 px-3 col-4 text-title">{{alias}}</span>
+
+  <ng-template #error>
+    <span  (click)="goDown('targetHome')" class="m-0 py-2 px-3 col-4 text-title">CV</span>
+  </ng-template>
+
+
+  <div class="p-0 m-0 col-8 grid flex justify-content-end">
+    <div class="p-0 m-0" *ngFor="let option of menu">
+      <div class="py-3 px-3  text-subtitle-02 col-12 "
+         *ngIf="option.isDesktop != false"
+        (click)="goDown(option.target)" >
+
+        <span  class="m-0 p-0">{{option.description}}</span>
+
+      </div>
+    </div>
+  </div>
+
+ </div>
+</div>
+
+<div class="container-movile p-0 m-0">
+  <div class="col-12 grid div-main p-0 flex justify-content-center align-items-center">
+    <span (click)="display = true" class="m-0 py-2 pr-0 pl-3 col-2 text-title">
+      <i class="pi pi-bars menu-icons"></i>
+    </span>
+    <span  *ngIf="alias else errorMovile"  (click)="goDown('targetHome')" class="m-0 py-2 pr-1 pl-0 col-10 text-title">
+      {{alias}}
+    </span>
+
+    <ng-template #errorMovile>
+      <span (click)="goDown('targetHome')" class="m-0 py-2 pr-1 pl-0 col-10 text-title">
+        CV
+      </span>
+    </ng-template>
+
+    <!--<span  class="m-0 py-2 px-3 col-2 text-title"><i class="pi pi-download menu-icons"></i></span>-->
+  </div>
+</div>
+
+
+<p-sidebar [(visible)]="display" [style]="{width:'280px'}"
+  [showCloseIcon]=false styleClass="menu">
+
+
+
+  <div class="p-0 m-0 grid flex justify-content-center align-items-center">
+
+
+    <div class="p-3 m-0 text-subtitle-03 col-12 grid flex align-items-center menu-header">
+      <span class="col-10 p-0 m-0" (click)="goDown('targetHome')">{{alias}}</span>
+      <i (click)="closeMenu()" class="pi pi-chevron-left col-2"></i>
+    </div>
+
+
+    <div class="p-0 m-0 col-12"  *ngFor="let option of menu">
+      <div class="p-3 m-0 text-subtitle-02 col-12 flex align-items-center"
+           *ngIf="option.isMovile === true"
+          (click)="goDown(option.target)">
+
+        <span  class="m-0 p-0">{{option.description}}</span>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+</p-sidebar>
+
+
+
